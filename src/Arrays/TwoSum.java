@@ -1,5 +1,7 @@
 package Arrays;
 
+import java.util.*;
+
 /* 
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -34,12 +36,29 @@ new int[] { i, j }
  */
 
 public class TwoSum {
-    public  int[] twoSumBruitApproch(int[] nums, int target) {
+    public int[] twoSumBruitApproch(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[j] == target - nums[i])
                     return new int[] { i, j };
             }
+        }
+        return null;
+    }
+
+    public int[] hasMapsolution(int[] nums, int target) {
+
+        Map<Integer, Integer> hasmap = new HashMap<Integer, Integer>();
+
+        for (int i = 0; i < nums.length; i++) {
+            hasmap.put(nums[i], i);
+        }
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (hasmap.containsKey(complement)) {
+                return new int[] { hasmap.get(complement), i };
+            }
+            hasmap.put(nums[i], i);
         }
         return null;
     }

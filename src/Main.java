@@ -11,5 +11,8 @@ public class Main {
 
         System.out.println(
                 Arrays.toString(twoSum.twoSumBruitApproch(nums, target)));
+
+        System.out.println(
+                Arrays.toString(twoSum.hasMapsolution(nums, target)));
     }
 }
