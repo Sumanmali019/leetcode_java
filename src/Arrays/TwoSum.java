@@ -49,7 +49,6 @@ public class TwoSum {
     // Time O(n^2) and space o(n)
 
     public int[] hasMapsolution(int[] nums, int target) {
-
         Map<Integer, Integer> hasmap = new HashMap<Integer, Integer>();
 
         for (int i = 0; i < nums.length; i++) {

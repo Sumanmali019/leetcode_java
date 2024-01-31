@@ -13,6 +13,6 @@ public class Main {
                 Arrays.toString(twoSum.twoSumBruitApproch(nums, target)));
 
         System.out.println(
-                Arrays.toString(twoSum.hasMapsolution(nums, target)));
+                Arrays.toString(twoSum.twoSumBruitApproch(nums, target)));
     }
 }
