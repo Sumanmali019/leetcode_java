@@ -46,6 +46,8 @@ public class TwoSum {
         return null;
     }
 
+    // Time O(n^2) and space o(n)
+
     public int[] hasMapsolution(int[] nums, int target) {
 
         Map<Integer, Integer> hasmap = new HashMap<Integer, Integer>();
@@ -63,3 +65,4 @@ public class TwoSum {
         return null;
     }
 }
+// Time o(n) and space o(n)
